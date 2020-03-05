@@ -1,11 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: kubectl-helm-aws
+  name: aws-cli
 spec:
   containers:
-  - name: kubectl-helm-aws
-    image: quay.io/helmpack/kubectl-helm-aws:0.1.1
+  - name: aws-cli
+    image: mattelgin/aws-cli:0.0.1
     command: [ "cat" ]
     tty: true
+    imagePullPolicy: Always
   serviceAccountName: jenkins

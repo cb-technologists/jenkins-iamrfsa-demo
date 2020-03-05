@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage("Deploy") {
       steps {
-        container("kubectl-helm-aws") {
+        container("aws-cli") {
           sh "aws s3 cp index.html s3://${params.S3_BUCKET_NAME}"
         }
       }
