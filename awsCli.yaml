@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kubectl-helm-aws
+spec:
+  containers:
+  - name: kubectl-helm-aws
+    image: quay.io/helmpack/kubectl-helm-aws
+    command: [ "cat" ]
+    tty: true
+  serviceAccountName: jenkins
